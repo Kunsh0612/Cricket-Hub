@@ -19,16 +19,46 @@ section {
   box-sizing: border-box;
 }
 
-.team {
-  float: left;
-  width: 100%; /* Set width to 100% for responsiveness */
-  padding: 5px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as needed */
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.team {
+  width: 30%; /* Adjust as needed */
+  margin: 10px;
+  text-align: center;
+}
+
+.team img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center players within the team */
+}
+
+.player {
+  width: 30%; /* Adjust as needed */
+  margin: 10px;
+  text-align: center;
+}
+
+.player img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 
 header {
@@ -45,8 +75,8 @@ nav ul {
 }
 
 nav ul li {
-  display: block; /* Change to block for responsiveness */
-  margin-bottom: 10px; /* Add margin for spacing */
+  display: inline;
+  margin-right: 20px;
 }
 
 main {
@@ -63,27 +93,6 @@ footer {
   width: 100%;
 }
 
-.player-list {
-  list-style: none;
-  padding: 0;
-}
-
-.player {
-  display: block; /* Change to block for responsiveness */
-  margin: 10px auto; /* Center the players */
-  text-align: center;
-}
-
-.player img {
-  width: 100%;
-  max-width: 150px;
-  cursor: pointer;
-}
-
-.player p {
-  margin: 5px 0;
-}
-
 a:link,
 a:visited,
 a:hover,
@@ -96,13 +105,21 @@ a:active {
 /* Media Query for Tablets and Small Desktops */
 @media (min-width: 768px) {
   .team {
-    width: 50%; /* Adjust the width based on your design */
+    width: 45%;
+  }
+
+  .player {
+    width: 45%;
   }
 }
 
-/* Media Query for Phones */
-@media (max-width: 767px) {
+/* Media Query for Large Screens */
+@media (min-width: 1200px) {
   .team {
-    width: 100%;
+    width: 30%;
+  }
+
+  .player {
+    width: 30%;
   }
 }
