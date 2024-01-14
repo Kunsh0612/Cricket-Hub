@@ -2,32 +2,63 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-    background-image: url("background.jpg");
-    background-size:cover;
-    font-family: 'Courier New', monospace;
+  background-image: url("background.jpg");
+  background-size: cover;
+  font-family: 'Courier New', monospace;
 }
 
 .Welcome {
-    font-size: 40px;
+  font-size: 40px;
 }
+
 section {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.team {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as needed */
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.team {
+  width: 30%; /* Adjust as needed */
+  margin: 10px;
+  text-align: center;
+}
+
+.team img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center players within the team */
+}
+
+.player {
+  width: 30%; /* Adjust as needed */
+  margin: 10px;
+  text-align: center;
+}
+
+.player img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 
 header {
@@ -62,44 +93,33 @@ footer {
   width: 100%;
 }
 
-.player-list {
-  list-style: none;
-  padding: 0;
-}
-
-.player {
-  display: inline-block;
-  margin: 10px;
-  text-align: center;
-}
-
-.player img {
-  width: 100%;
-  max-width: 150px;
-  cursor: pointer;
-}
-
-.player p {
-  margin: 5px 0;
-}
-
-a:link {
+a:link,
+a:visited,
+a:hover,
+a:active {
   color: green;
   background-color: transparent;
   text-decoration: none;
 }
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
+
+/* Media Query for Tablets and Small Desktops */
+@media (min-width: 768px) {
+  .team {
+    width: 45%;
+  }
+
+  .player {
+    width: 45%;
+  }
 }
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
+
+/* Media Query for Large Screens */
+@media (min-width: 1200px) {
+  .team {
+    width: 30%;
+  }
+
+  .player {
+    width: 30%;
+  }
 }
