@@ -115,8 +115,4 @@ a:active {
   .player p {
     font-size: 14px; /* Adjust as needed for smaller screens */
   }
-
-  footer {
-    position: fixed; /* Adjust as needed for smaller screens */
-  }
 }
