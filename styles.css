@@ -101,18 +101,3 @@ a:active {
   background-color: transparent;
   text-decoration: none;
 }
-
-/* Media Query for Phones */
-@media (max-width: 767px) {
-  .Welcome {
-    font-size: 24px; /* Adjust as needed for smaller screens */
-  }
-
-  h2 {
-    font-size: 18px; /* Adjust as needed for smaller screens */
-  }
-
-  .player p {
-    font-size: 14px; /* Adjust as needed for smaller screens */
-  }
-}
